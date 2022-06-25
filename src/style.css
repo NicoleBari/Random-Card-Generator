@@ -1,1 +1,66 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: lightblue;
+  box-sizing: border-box;
+}
+.card {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  margin-top: 100px;
+  height: 400px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #e8daef;
+  padding: 15px;
+  position: relative;
+}
+.card:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top left, #ff3d00 0%, #0400ff 100%);
+  transform: translate3d(0px, 20px, 0) scale(0.95);
+  filter: blur(20px);
+  opacity: var(0.7);
+  transition: opacity 0.3s;
+}
+.card::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.up {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 70px;
+}
+.number {
+  text-align: center;
+  position: absolute;
+  top: 150px;
+  left: 75px;
+  right: 75px;
+  font-size: 60px;
+}
+.down {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 70px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
